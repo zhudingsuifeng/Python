@@ -23,3 +23,13 @@
 - Git branch  --set-upstream-to =origin/master master
 - git branch  --set-upstream-to =origin/ThirdParty ThirdParty
 - git config --global push.default matching
+
+###使用sublimetext搭建Python开发环境
+- 前面准备，首先要安装Python和Github和sublimetext
+- 在安装sublimentext后，使用ctrl+shift+P打开控制面板，安装install Package
+- 安装sublimecodeintel,sublimeREPL
+- 安装GitGutter插件，然后在sublime的preferences-Package Settings下的GitGutter-Settings User添加 
+{
+"git_binary": "git.exe目录，注意\转义字符，最后要到git.exe"
+}
+- 安装Anaconda（号称最强的Python IDE插件）
