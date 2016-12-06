@@ -32,4 +32,4 @@
 {
 "git_binary": "git.exe目录，注意\转义字符，最后要到git.exe"
 }
-- 安装Anaconda（号称最强的Python IDE插件）
+- 安装Anaconda（号称最强的Python IDE插件），这个插件和前面的不是很好的搭配，但是既然安装了就要彻底解决麻烦，可以参考http://www.cnblogs.com/nx520zj/p/5787393.html
