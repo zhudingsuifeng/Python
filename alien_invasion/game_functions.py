@@ -38,6 +38,8 @@ def check_play_button(ai_settings,screen,stats,play_button,ship,aliens,bullets,m
 	"""在玩家单击Play按钮时开始新游戏"""
 	button_clicked=play_button.rect.collidepoint(mouse_x,mouse_y)
 	if button_clicked and not stats.game_active:
+		#重置游戏设置
+		ai_settings.initialize_dynamic_settings()
 		#隐藏光标
 		pygame.mouse.set_visible(False)
 		#重置游戏统计信息
@@ -50,7 +52,7 @@ def check_play_button(ai_settings,screen,stats,play_button,ship,aliens,bullets,m
 		create_fleet(ai_settings, screen, ship, aliens)
 		ship.center_ship()
 
-def update_screen(ai_settings,screen,stats,ship,aliens,bullets,play_button):
+def update_screen(ai_settings,screen,stats,sb,ship,aliens,bullets,play_button):
 	"""更新屏幕上的图像，并切换到新屏幕"""
 	#每次循环时都重绘屏幕
 	screen.fill(ai_settings.bg_color)
@@ -59,12 +61,14 @@ def update_screen(ai_settings,screen,stats,ship,aliens,bullets,play_button):
 		bullet.draw_bullet()
 	ship.blitme()
 	aliens.draw(screen)
+	#显示得分
+	sb.show_score()
 	#如果游戏处于非活动状态，就绘制play按钮
 	if not stats.game_active:
 		play_button.draw_button()
 	#让最近绘制的屏幕可见
 	pygame.display.flip()
-def update_bullets(ai_settings,screen,ship,aliens,bullets):
+def update_bullets(ai_settings,screen,stats,sb,ship,aliens,bullets):
 	"""更新子弹的位置，并删除已消失的子弹"""
 	#更新子弹的位置
 	bullets.update()
@@ -72,14 +76,19 @@ def update_bullets(ai_settings,screen,ship,aliens,bullets):
 	for bullet in bullets.copy():#之所以使用copy，而不是用原始组,是因为直接在原始组的基础上修改，会破坏循环
 		if bullet.rect.bottom<=0:
 			bullets.remove(bullet)
-	check_bullet_alien_collisions(ai_settings,screen,ship,aliens,bullets)
-def check_bullet_alien_collisions(ai_settings,screen,ship,aliens,bullets):
+	check_bullet_alien_collisions(ai_settings,screen,stats,sb,ship,aliens,bullets)
+def check_bullet_alien_collisions(ai_settings,screen,stats,sb,ship,aliens,bullets):
 	"""响应子弹和外星人的碰撞"""
 	#删除发生碰撞的子弹和外星人
 	collisions=pygame.sprite.groupcollide(bullets,aliens,True,True)
+	if collisions:
+		for aliens in collisions.values():
+			stats.score+=ai_settings.alien_point*len(aliens)
+			sb.prep_score()		
 	if len(aliens)==0:
-		#删除现有的子弹并新建一群外星人
+		#删除现有的子弹,加快游戏节奏，并新建一群外星人
 		bullets.empty()
+		ai_settings.increase_speed()
 		create_fleet(ai_settings, screen, ship, aliens)
 
 def fire_bullet(ai_settings,screen,ship,bullets):
