@@ -1,0 +1,4 @@
+- ubuntu下输入python命令，就可以测试电脑中是否安装python，并且显示python版本.
+- 我们使用python-easy_insatll给python安装第三方的扩展包
+- 使用sudo apt-get install python-setuptools安装easy_install插件
+- 使用sudo easy_install 扩展包,来安装第三方扩展包
