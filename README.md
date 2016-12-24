@@ -42,4 +42,4 @@
 - 还需要安装wheel: pip install wheel
 - 安装Numpy: pip install Numpy
 - 安装Matplotlib: pip install Matplotlib
-![pip安装插件](images/pip安装插件.jpg)
+![pip安装插件](images/pip安装插件.png)
