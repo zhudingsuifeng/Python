@@ -42,4 +42,12 @@
 - 还需要安装wheel: pip install wheel
 - 安装Numpy: pip install Numpy
 - 安装Matplotlib: pip install Matplotlib
-![pip安装插件](images/pip安装插件.png)
+![pip安装插件](images/pip安装插件.png)  
+- pip是目前python包管理的事实标准。它作为easy_install的替代品，但是它仍有大量的功能建立在setuptools组件之上。
+- pip可以直接从gz或者zip压缩包安装，支持搜索包，以及制定服务器安装等功能。
+- wheel本质上是一个zip包格式，它使用.whl扩展名，用于Python模块的安装，他的出现是为了替代eggs.
+- pip提供了一个wheel子命令来安装wheel包。但是，需要先安装wheel模块。
+- pip和easy_install的比较  
+![pip和easy_install的比较](images/pipvseasy_install.png)  
+- wheel和eggs  
+![wheel和eggs](images/eggsvswheel.png)
