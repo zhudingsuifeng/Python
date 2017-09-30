@@ -62,7 +62,14 @@ with open("../data/changefile.csv") as csvf:
 	reader=csv.reader(csvf)
 	print(type(reader))   #<type 'list'>
 	print(len(reader))    #TypeError:object of type '_csv.reader' has no len() 
-csf=open("../data/changefile.csv").readlines()
-print(type(csf))       #<type 'list'>
-print(len(csf))        #2918
+	for row in reader:
+		print(row)       #['300312','-2.62',...]
+		print(type(row)) #<type 'list'>
+		print(type(row[0]))  #<type 'str'>
+csvf=open("../data/changefile.csv").readlines()
+print(type(csvf))       #<type 'list'>
+print(len(csvf))        #2918
+for row in range(0,len(csvf)):
+    print(csvf[row])  #300312,-2.62,0.35...
+    print(type(csvf[row])) #<type 'str'>
 ```
