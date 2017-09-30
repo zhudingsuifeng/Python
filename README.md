@@ -56,3 +56,13 @@ python2 -m pip install numpy==1.13.1 #安装numpy1.13.1
 python2 -m pip install pandas #重新安装对numpy有依赖的pandas包
 import skimage.measure as sm   #运行成功
 ``` 
+- 打开文件的两种方式略有不同：
+```javascript
+with open("../data/changefile.csv") as csvf:
+	reader=csv.reader(csvf)
+	print(type(reader))   #<type 'list'>
+	print(len(reader))    #TypeError:object of type '_csv.reader' has no len() 
+csf=open("../data/changefile.csv").readlines()
+print(type(csf))       #<type 'list'>
+print(len(csf))        #2918
+```
