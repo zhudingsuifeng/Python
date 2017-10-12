@@ -14,7 +14,7 @@
 #yum install -y python-pip    #报错
 No package python-pip available.
 #yum -y install epel-release   #安装epel扩展源
-#yum -y install python-pip     #只有就可以使用pip安装python的程序包了
+#yum -y install python-pip     #这就可以使用pip安装python的程序包了
 #pip install SomePackage #Install a package from PyPI
 pip show --files SomePackage #show what files were installed
 pip list --outdated    #list what package are outdated
