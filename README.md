@@ -73,3 +73,13 @@ for row in range(0,len(csvf)):
     print(csvf[row])  #300312,-2.62,0.35...
     print(type(csvf[row])) #<type 'str'>
 ```
+### python一些函数的说明
+```javascript
+import numpy as np 
+np.array(np.zeros([10,10]),dtype=np.float32) 
+#np.array()create an array,np.zeros([m,n])create m*n matrices,dtype=np.float32,specifies the data type.
+e,v=np.linalg.eig(x) #Compute the eigenvalues and right eigenvectors of a square array.
+#return e,v ,e is the eigenvalues,v is the normalized eigenvectors,such that the column v[:,i] is the eigenvector corresponding to the eigenvalue e[i].
+np.argsort(a,axis=-1,kind='quicksort',order=None) #Returns the indices that would sort an array.
+#Perform an indirect sort along the given axis using the algorithm specified by the kind keyword.It returns an array of indiecs of the same shape as a that index data along the given axis in sorted order.
+```
