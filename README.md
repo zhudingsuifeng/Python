@@ -45,6 +45,9 @@ $python2
 '1.9.0'
 >>>numpy.__file__
 '/usr/lib64/python2.7/site-packages/numpy/__init__.pyc'
+>>>import matplotlib
+>>>matplotlib.__version__
+'2.0.2'
 $python3
 >>>import numpy
 >>>numpy.version.version
