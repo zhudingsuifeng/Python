@@ -86,3 +86,24 @@ e,v=np.linalg.eig(x) #Compute the eigenvalues and right eigenvectors of a square
 np.argsort(a,axis=-1,kind='quicksort',order=None) #Returns the indices that would sort an array.
 #Perform an indirect sort along the given axis using the algorithm specified by the kind keyword.It returns an array of indiecs of the same shape as a that index data along the given axis in sorted order.
 ```
+###使用sublimetext搭建Python开发环境
+- 前面准备，首先要安装Python和Github和sublimetext
+- 在安装sublimentext后，使用ctrl+shift+P打开控制面板，安装install Package
+- 安装sublimecodeintel,sublimeREPL
+- 安装GitGutter插件，然后在sublime的preferences-Package Settings下的GitGutter-Settings User添加 
+{
+"git_binary": "git.exe目录，注意\转义字符，最后要到git.exe"
+}
+- 安装Anaconda（号称最强的Python IDE插件），这个插件和前面的不是很好的搭配，但是既然安装了就要彻底解决麻烦，可以参考http://www.cnblogs.com/nx520zj/p/5787393.html
+###windows下使用cmd安装numpy和matplotlib出现常见问题：
+- permission error:在cmd下执行需要管理员的命令时，没有管理员权限。
+- 在C:\Windows\System32下找到cmd.exe文件，右键，以管理员身份运行。
+- python3.5.2版本里有pip，因此只需要更新一下就可以了：Python -m pip install -U pip ,显示Requirement already up-to-date:就是说要求已经更新
+- 还需要安装wheel: pip install wheel
+- 安装Numpy: pip install Numpy
+- 安装Matplotlib: pip install Matplotlib
+![pip安装插件](images/pip安装插件.png)  
+- pip是目前python包管理的事实标准。它作为easy_install的替代品，但是它仍有大量的功能建立在setuptools组件之上。
+- pip可以直接从gz或者zip压缩包安装，支持搜索包，以及制定服务器安装等功能。
+- wheel本质上是一个zip包格式，它使用.whl扩展名，用于Python模块的安装，他的出现是为了替代eggs.
+- pip提供了一个wheel子命令来安装wheel包。但是，需要先安装wheel模块。
