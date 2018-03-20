@@ -107,3 +107,16 @@ np.argsort(a,axis=-1,kind='quicksort',order=None) #Returns the indices that woul
 - pip可以直接从gz或者zip压缩包安装，支持搜索包，以及制定服务器安装等功能。
 - wheel本质上是一个zip包格式，它使用.whl扩展名，用于Python模块的安装，他的出现是为了替代eggs.
 - pip提供了一个wheel子命令来安装wheel包。但是，需要先安装wheel模块。
+### 使用python监控python程序中内存和cpu的使用情况。
+```javascript
+$time scrpt.py   #return the time that the script used.
+$python2 -m pip install line_profiler
+$python2 -m pip install psutil
+$python2 -m pip install memory_profiler
+#line_profiler给出每一行代码花费cpu的时间。使用的时候，需要在评估的函数之前添加修饰器@profile
+$kernprof -l -v script.py
+#-l逐行 -v详细输出
+#memory_profiler逐行测量代码对内存的使用，与line_profiler类似，需要添加修饰器。
+#另外psutil可以使memory_profiler运行的更快。
+$python -m memory_profiler script.py
+```
