@@ -11,6 +11,7 @@ from collections import Counter
 import numpy as np
 import math
 
+#get the three characters with the highest frequency
 def chapr(strch):
     strs=Counter(strch)
     result=sorted(strs.items(),key=lambda k:k[1],reverse=True)
@@ -20,5 +21,6 @@ def chapr(strch):
 	    ch+=result[i+1][0]
 	else:
 	    return ch
+
 strs=raw_input()
 print(chapr(strs))
