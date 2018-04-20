@@ -22,5 +22,27 @@ def chapr(strch):
 	else:
 	    return ch
 
+#the problem of dressing in different colors
+def dress(instr):
+    result=[]
+    sub=0
+    if instr is None or len(instr)==0:
+	return 0
+    pattern=instr[0]
+    result.append(pattern)
+    for s in instr[1:]:
+	if s==pattern:
+	    result[-1]+=s
+	else:
+	    pattern=s
+	    result.append(pattern)
+    for each in result:
+	if len(each)==1:
+	    sub+=0
+	else:
+	    sub+=len(each)/2
+    return sub
+
 strs=raw_input()
-print(chapr(strs))
+#print(chapr(strs))
+print(dress(strs))
