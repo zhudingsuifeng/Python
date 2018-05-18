@@ -5,10 +5,13 @@ Create on Tue May 15 10:12:49 2018
 @author:fly
 python tutorial.
 """
+import re
 import os
 import sys
 import numpy as np
 import math
+import string
+import pickle
 from math import pi as PI
 
 #calculate the area of the circle
@@ -234,15 +237,45 @@ class Set(object):
 	def show(self):
 		print(self.__data)
 
+#
+def _identifyClassNames(index,line):
+	pass
+def _identifyFunctionNames(index,line):
+	pass
+def _identifyVariableNames(index,line):
+	pass
+def output():
+	pass
+
 if __name__=="__main__":
 	#s=raw_input("origin string:")
 	#n=raw_input("another string:")
 	#print(CircleArea(s))
 	#print(acc(s,n))
-	x=Set([1,2,3,4,5,6])
-	y=Set([7,3,8,9,5])
-	x.show()
-	(x-y).show()
-	(x|y).show()
-	(x&y).show()
+	#x=Set([1,2,3,4,5,6])
+	#y=Set([7,3,8,9,5])
+	#x.show()
+	#(x-y).show()
+	#(x|y).show()
+	#(x&y).show()
+	#intab="abcd"
+	#outtab="1234"
+	#table=string.maketrans(intab,outtab)
+	#test="adfsdffsdabcdsdfsdfs"
+	#print(test.translate(table))
+	n=7
+	i=13000000
+	lst=[1,2,3]
+	f=open('samp.dat','wb')
+	try:
+		pickle.dump(n,f)
+		pickle.dump(i,f)
+		pickle.dump(lst,f)
+	except:
+		print('write error')
+	finally:
+		f.close()
+	nf=open('samp.dat','rb')
+	print(pickle.load(nf))
+	nf.close()
 	print("success")
