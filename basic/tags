@@ -1,0 +1,196 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Alien	alien_invasion/alien.py	/^class Alien(Sprite):$/;"	c
+Alien	alien_invasion/alien_invasion.py	/^from alien import Alien$/;"	i
+Alien	alien_invasion/game_functions.py	/^from alien import Alien$/;"	i
+Bullet	alien_invasion/bullet.py	/^class Bullet(Sprite):$/;"	c
+Bullet	alien_invasion/game_functions.py	/^from bullet import Bullet$/;"	i
+Button	alien_invasion/alien_invasion.py	/^from button import Button$/;"	i
+Button	alien_invasion/button.py	/^class Button():$/;"	c
+CircleArea	plib.py	/^def CircleArea(r):$/;"	f
+Counter	chapr.py	/^from collections import Counter$/;"	i
+GameStats	alien_invasion/alien_invasion.py	/^from game_stats import GameStats$/;"	i
+GameStats	alien_invasion/game_stats.py	/^class GameStats():$/;"	c
+Group	alien_invasion/alien_invasion.py	/^from pygame.sprite import Group$/;"	i
+MyArray	plib.py	/^class MyArray(object):$/;"	c
+PI	plib.py	/^from math import pi as PI$/;"	i
+Scoreboard	alien_invasion/alien_invasion.py	/^from scoreboard import Scoreboard$/;"	i
+Scoreboard	alien_invasion/scoreboard.py	/^class Scoreboard():$/;"	c
+Set	plib.py	/^class Set(object):$/;"	c
+Settings	alien_invasion/alien_invasion.py	/^from settings import Settings$/;"	i
+Settings	alien_invasion/settings.py	/^class Settings():$/;"	c
+Ship	alien_invasion/alien_invasion.py	/^from ship import Ship$/;"	i
+Ship	alien_invasion/ship.py	/^class Ship():$/;"	c
+Sprite	alien_invasion/alien.py	/^from pygame.sprite import Sprite$/;"	i
+Sprite	alien_invasion/bullet.py	/^from pygame.sprite import Sprite$/;"	i
+Ss	plib.py	/^def Ss(s):$/;"	f
+Weight	weights/weights.py	/^class Weight(pygame.sprite.Sprite):$/;"	c
+__IsNumber	plib.py	/^	def __IsNumber(self,n):$/;"	m	class:MyArray	file:
+__add__	plib.py	/^	def __add__(self,n):$/;"	m	class:MyArray	file:
+__and__	plib.py	/^	def __and__(self,oset):$/;"	m	class:Set	file:
+__contains	plib.py	/^	def __contains(self,v):$/;"	m	class:MyArray	file:
+__del__	plib.py	/^	def __del__(self):$/;"	m	class:MyArray	file:
+__del__	plib.py	/^	def __del__(self):$/;"	m	class:Set	file:
+__eq__	plib.py	/^	def __eq__(self,oset):$/;"	m	class:Set	file:
+__eq__	plib.py	/^	def __eq__(self,v):$/;"	m	class:MyArray	file:
+__getitem__	plib.py	/^	def __getitem__(self,index):$/;"	m	class:MyArray	file:
+__init__	alien_invasion/alien.py	/^	def __init__(self, ai_settings,screen):$/;"	m	class:Alien
+__init__	alien_invasion/bullet.py	/^	def __init__(self, ai_settings,screen,ship):$/;"	m	class:Bullet
+__init__	alien_invasion/button.py	/^	def __init__(self, ai_settings,screen,msg):$/;"	m	class:Button
+__init__	alien_invasion/game_stats.py	/^	def __init__(self, ai_settings):$/;"	m	class:GameStats
+__init__	alien_invasion/scoreboard.py	/^	def __init__(self, ai_settings,screen,stats):$/;"	m	class:Scoreboard
+__init__	alien_invasion/settings.py	/^	def __init__(self):$/;"	m	class:Settings
+__init__	alien_invasion/ship.py	/^	def __init__(self,ai_settings, screen):$/;"	m	class:Ship
+__init__	plib.py	/^	def __init__(self,*args):$/;"	m	class:MyArray
+__init__	plib.py	/^	def __init__(self,data=None):$/;"	m	class:Set
+__init__	weights/weights.py	/^	def __init__(self):$/;"	m	class:Weight
+__mod__	plib.py	/^	def __mod__(self,n):$/;"	m	class:MyArray	file:
+__or__	plib.py	/^	def __or__(self,oset):$/;"	m	class:Set	file:
+__setitem__	plib.py	/^	def __setitem__(self,index,value):$/;"	m	class:MyArray	file:
+__sub__	plib.py	/^	def __sub__(self,n):$/;"	m	class:MyArray	file:
+__sub__	plib.py	/^	def __sub__(self,oset):$/;"	m	class:Set	file:
+a	before/copytest.py	/^a=[1,2,3,4,['a','b']]#原始对象$/;"	v
+acc	plib.py	/^def acc(o,i):$/;"	f
+add	plib.py	/^	def add(self,value):$/;"	m	class:Set
+append	plib.py	/^	def append(self,v):$/;"	m	class:MyArray
+b	before/copytest.py	/^b=a #赋值，传递对象引用$/;"	v
+bg	weights/weights.py	/^bg=(255,255,255)$/;"	v
+blitme	alien_invasion/alien.py	/^	def blitme(self):$/;"	m	class:Alien
+blitme	alien_invasion/ship.py	/^	def blitme(self):$/;"	m	class:Ship
+c	before/copytest.py	/^c=copy.copy(a)#对象拷贝，浅拷贝$/;"	v
+calcuDistance	before/kmeans.py	/^def calcuDistance(vec1,vec2):$/;"	f
+center_ship	alien_invasion/ship.py	/^	def center_ship(self):$/;"	m	class:Ship
+centroidList	before/kmeans.py	/^		centroidList=getCentroids(clusterDict)#获得新的质心$/;"	v
+centroidList	before/kmeans.py	/^	centroidList=initCentroids(dataSet,6)#初始化质心，设置k=6$/;"	v
+change_fleet_direction	alien_invasion/game_functions.py	/^def change_fleet_direction(ai_settings,aliens):$/;"	f
+chapr	chapr.py	/^def chapr(strch):$/;"	f
+check_aliens_bottom	alien_invasion/game_functions.py	/^def check_aliens_bottom(ai_settings,stats,screen,ship,aliens,bullets):$/;"	f
+check_bullet_alien_collisions	alien_invasion/game_functions.py	/^def check_bullet_alien_collisions(ai_settings,screen,stats,sb,ship,aliens,bullets):$/;"	f
+check_edges	alien_invasion/alien.py	/^	def check_edges(self):$/;"	m	class:Alien
+check_events	alien_invasion/game_functions.py	/^def check_events(ai_settings,screen,stats,play_button,ship,aliens,bullets):$/;"	f
+check_fleet_edges	alien_invasion/game_functions.py	/^def check_fleet_edges(ai_settings,aliens):$/;"	f
+check_keydown_events	alien_invasion/game_functions.py	/^def check_keydown_events(event,ai_settings,screen,ship,bullets):$/;"	f
+check_keyup_events	alien_invasion/game_functions.py	/^def check_keyup_events(event,ship):$/;"	f
+check_play_button	alien_invasion/game_functions.py	/^def check_play_button(ai_settings,screen,stats,play_button,ship,aliens,bullets,mouse_x,mouse_y):$/;"	f
+clear_callback	weights/weights.py	/^def clear_callback(surf,rect):$/;"	f
+clusterDict	before/kmeans.py	/^		clusterDict=minDistance(dataSet, centroidList)#新的聚类结果$/;"	v
+clusterDict	before/kmeans.py	/^	clusterDict=minDistance(dataSet, centroidList) #第一次聚类迭代$/;"	v
+codecs	before/kmeans.py	/^import codecs$/;"	i
+comb	tools.py	/^comb=[]$/;"	v
+combinations	tools.py	/^def combinations(iterable,r):$/;"	f
+combinations	triangle.py	/^def combinations(iterable,r):$/;"	f
+compose	tools.py	/^def compose(inline,n):$/;"	f
+copy	before/copytest.py	/^import copy$/;"	i
+copy	before/kmeans.py	/^import copy$/;"	i
+create_alien	alien_invasion/game_functions.py	/^def create_alien(ai_settings,screen,aliens,alien_number,row_number):$/;"	f
+create_fleet	alien_invasion/game_functions.py	/^def create_fleet(ai_settings,screen,ship,aliens):$/;"	f
+d	before/copytest.py	/^d=copy.deepcopy(a)#对象拷贝，深拷贝$/;"	v
+dataSet	before/kmeans.py	/^	dataSet=loadDataSet(inFile)#载入数据集$/;"	v
+demo	plib.py	/^def demo(para):$/;"	f
+distance	triangle.py	/^def distance(p1,p2):$/;"	f
+draw_bullet	alien_invasion/bullet.py	/^	def draw_bullet(self):$/;"	m	class:Bullet
+draw_button	alien_invasion/button.py	/^	def draw_button(self):$/;"	m	class:Button
+dress	chapr.py	/^def dress(instr):$/;"	f
+fire_bullet	alien_invasion/game_functions.py	/^def fire_bullet(ai_settings,screen,ship,bullets):$/;"	f
+font	alien_invasion/button.py	/^import pygame.font$/;"	i
+font	alien_invasion/scoreboard.py	/^import pygame.font$/;"	i
+getCentroids	before/kmeans.py	/^def getCentroids(clusterDict):$/;"	f
+getVar	before/kmeans.py	/^def getVar(clusterDist,centroidList):$/;"	f
+get_number_aliens_x	alien_invasion/game_functions.py	/^def get_number_aliens_x(ai_settings,alien_width):$/;"	f
+get_number_rows	alien_invasion/game_functions.py	/^def get_number_rows(ai_settings,ship_height,alien_height):$/;"	f
+gf	alien_invasion/alien_invasion.py	/^import game_functions as gf$/;"	i
+inFile	before/kmeans.py	/^	inFile="testSet.txt"       #数据及文件$/;"	v
+increase_speed	alien_invasion/settings.py	/^	def increase_speed(self):$/;"	m	class:Settings
+initCentroids	before/kmeans.py	/^def initCentroids(dataSet,k):$/;"	f
+initialize_dynamic_settings	alien_invasion/settings.py	/^	def initialize_dynamic_settings(self):$/;"	m	class:Settings
+inline	tools.py	/^inline=[]$/;"	v
+judgment	triangle.py	/^def judgment(p1,p2,p3):$/;"	f
+k	before/kmeans.py	/^	k=2$/;"	v
+line	tools.py	/^    line=sys.stdin.readline()$/;"	v
+line	triangle.py	/^    	line=sys.stdin.readline()$/;"	v
+loadDataSet	before/kmeans.py	/^def loadDataSet(inFile):$/;"	f
+magiciansnames	before/magic.py	/^magiciansnames=['hannah','ty','margot','huang']$/;"	v
+make_great	before/magic.py	/^def make_great(names):$/;"	f
+make_pizza	before/pizza.py	/^def make_pizza(size,*toppings):$/;"	f
+math	chapr.py	/^import math$/;"	i
+math	plib.py	/^import math$/;"	i
+math	tools.py	/^import math$/;"	i
+math	triangle.py	/^import math$/;"	i
+matplotlib	before/kmeans.py	/^import matplotlib.pyplot as plt$/;"	i
+maxs	tools.py	/^maxs=int(inline[0][0])$/;"	v
+minDistance	before/kmeans.py	/^def minDistance(dataSet,centroidList):$/;"	f
+newVar	before/kmeans.py	/^		newVar=getVar(clusterDict, centroidList)$/;"	v
+newVar	before/kmeans.py	/^	newVar=getVar(clusterDict, centroidList)#获得均方误差值，通过新旧$/;"	v
+np	chapr.py	/^import numpy as np$/;"	i
+np	plib.py	/^import numpy as np$/;"	i
+np	tools.py	/^import numpy as np$/;"	i
+np	triangle.py	/^import numpy as np$/;"	i
+num	triangle.py	/^num=0$/;"	v
+numpy	before/kmeans.py	/^import numpy$/;"	i
+oldVar	before/kmeans.py	/^		oldVar=newVar$/;"	v
+oldVar	before/kmeans.py	/^	oldVar=-0.0001     #旧均方误差值初始化为-1$/;"	v
+os	chapr.py	/^import os$/;"	i
+os	plib.py	/^import os$/;"	i
+os	tools.py	/^import os$/;"	i
+os	triangle.py	/^import os$/;"	i
+p	triangle.py	/^    	p=line.split()$/;"	v
+plt	before/kmeans.py	/^import matplotlib.pyplot as plt$/;"	i
+pm	before/client.py	/^from functions import print_models as pm$/;"	i
+pnum	triangle.py	/^pnum=input()$/;"	v
+points	triangle.py	/^    points=np.array(points)$/;"	v
+points	triangle.py	/^points=[]$/;"	v
+prep_msg	alien_invasion/button.py	/^	def prep_msg(self,msg):$/;"	m	class:Button
+prep_score	alien_invasion/scoreboard.py	/^	def prep_score(self):$/;"	m	class:Scoreboard
+print_models	before/functions.py	/^def print_models(*lists):$/;"	f
+pygame	alien_invasion/alien.py	/^import pygame$/;"	i
+pygame	alien_invasion/alien_invasion.py	/^import pygame$/;"	i
+pygame	alien_invasion/bullet.py	/^import pygame$/;"	i
+pygame	alien_invasion/button.py	/^import pygame.font$/;"	i
+pygame	alien_invasion/game_functions.py	/^import pygame$/;"	i
+pygame	alien_invasion/scoreboard.py	/^import pygame.font$/;"	i
+pygame	alien_invasion/ship.py	/^import pygame$/;"	i
+pygame	weights/weights.py	/^import sys,pygame$/;"	i
+random	before/kmeans.py	/^import random$/;"	i
+randrange	weights/weights.py	/^from random import randrange$/;"	i
+re	before/kmeans.py	/^import re$/;"	i
+remove	plib.py	/^	def remove(self,value):$/;"	m	class:Set
+reset	weights/weights.py	/^	def reset(self):$/;"	m	class:Weight
+reset_stats	alien_invasion/game_stats.py	/^	def reset_stats(self):$/;"	m	class:GameStats
+rows	tools.py	/^rows=3$/;"	v
+run_game	alien_invasion/alien_invasion.py	/^def run_game():$/;"	f
+screen	weights/weights.py	/^screen=pygame.display.get_surface()$/;"	v
+screen_size	weights/weights.py	/^screen_size=1440,900$/;"	v
+ship_hit	alien_invasion/game_functions.py	/^def ship_hit(ai_settings,stats,screen,ship,aliens,bullets):$/;"	f
+show	plib.py	/^	def show(self):$/;"	m	class:MyArray
+show	plib.py	/^	def show(self):$/;"	m	class:Set
+showCluster	before/kmeans.py	/^def showCluster(centroidList,clusterDict):$/;"	f
+show_magicians	before/magic.py	/^def show_magicians(names):$/;"	f
+show_score	alien_invasion/scoreboard.py	/^	def show_score(self):$/;"	m	class:Scoreboard
+sleep	alien_invasion/game_functions.py	/^from time import sleep$/;"	i
+small	plib.py	/^def small(lst):$/;"	f
+sorting	plib.py	/^def sorting(l,k):$/;"	f
+sprites	weights/weights.py	/^sprites=pygame.sprite.RenderUpdates()$/;"	v
+strs	chapr.py	/^strs=raw_input()$/;"	v
+sys	alien_invasion/alien_invasion.py	/^import sys$/;"	i
+sys	alien_invasion/game_functions.py	/^import sys$/;"	i
+sys	chapr.py	/^import sys$/;"	i
+sys	plib.py	/^import sys$/;"	i
+sys	tools.py	/^import sys$/;"	i
+sys	triangle.py	/^import sys$/;"	i
+sys	weights/weights.py	/^import sys,pygame$/;"	i
+update	alien_invasion/alien.py	/^	def update(self):$/;"	m	class:Alien
+update	alien_invasion/bullet.py	/^	def update(self):$/;"	m	class:Bullet
+update	alien_invasion/ship.py	/^	def update(self):$/;"	m	class:Ship
+update	weights/weights.py	/^	def update(self):$/;"	m	class:Weight
+update_aliens	alien_invasion/game_functions.py	/^def update_aliens(ai_settings,stats,screen,ship,aliens,bullets):$/;"	f
+update_bullets	alien_invasion/game_functions.py	/^def update_bullets(ai_settings,screen,stats,sb,ship,aliens,bullets):$/;"	f
+update_screen	alien_invasion/game_functions.py	/^def update_screen(ai_settings,screen,stats,sb,ship,aliens,bullets,play_button):$/;"	f
+updates	weights/weights.py	/^updates=sprites.draw(screen)$/;"	v
+x	plib.py	/^	x=MyArray(1,2,3,4,5,6)$/;"	v
+x	triangle.py	/^    	x=float(p[0])$/;"	v
+y	plib.py	/^	y=MyArray(6,5,4,3,2,1)$/;"	v
+y	triangle.py	/^    	y=float(p[1])$/;"	v
