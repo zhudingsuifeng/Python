@@ -38,6 +38,14 @@ def cocktail_bubble(l):
         low = p
     return l
 
+# select sort
+def select_sort(l):
+    return l
+
+# insert sort
+def insert_sort(l):
+    return l
+
 if __name__ == "__main__":
     l = list(map(int, input().split()))
 
