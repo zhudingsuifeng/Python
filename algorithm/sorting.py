@@ -40,14 +40,27 @@ def cocktail_bubble(l):
 
 # select sort
 def select_sort(l):
+    for i in range(len(l)-1):
+        mindex = i
+        for j in range(i+1, len(l)):
+            if l[mindex] > l[j]:
+                mindex = j
+        l[i], l[mindex] = l[mindex], l[i]
     return l
 
 # insert sort
 def insert_sort(l):
+    for i in range(1, len(l)):
+        preIndex = i-1
+        temp = l[i]
+        while preIndex >= 0 and l[preIndex] > temp: 
+            l[preIndex+1] = l[preIndex]
+            preIndex -= 1
+        l[preIndex+1] = temp
     return l
 
 if __name__ == "__main__":
     l = list(map(int, input().split()))
 
-    print(' '.join(list(map(str, cocktail_bubble(l)))))
+    print(' '.join(list(map(str, insert_sort(l)))))
     # print(0)
