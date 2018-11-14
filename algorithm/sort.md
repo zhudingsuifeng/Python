@@ -6,6 +6,7 @@
     + 对每一对相邻元素做同样的工作，开始第一对到结尾的最后一对，这样在最后的元素应该会使最大的数；
     + 针对所有的元素重复以上的步骤，除了最后一个；
     + 重复步骤1～3，直到排序完成。  
+
 ![bubble sort](images/bubble_sort.gif)
 ```javascript
 #!/usr/bin/env python3

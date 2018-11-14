@@ -59,8 +59,23 @@ def insert_sort(l):
         l[preIndex+1] = temp
     return l
 
+# shell sort
+def shell_sort(l):
+    for gap in range(len(l)//3, 0, -1):
+        print(gap)
+        print(l)
+        for i in range(gap):
+            for j in range(i+gap, len(l), gap):
+                preIndex = j-gap
+                temp = l[j]
+                while preIndex >= 0 and l[preIndex] > temp:
+                    l[preIndex+gap] = l[preIndex]
+                    preIndex -= gap
+                l[preIndex+gap] = temp
+    return l
+
 if __name__ == "__main__":
     l = list(map(int, input().split()))
 
-    print(' '.join(list(map(str, insert_sort(l)))))
+    print(' '.join(list(map(str, shell_sort(l)))))
     # print(0)
