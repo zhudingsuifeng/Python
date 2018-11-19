@@ -21,16 +21,33 @@ def test():
     print(test.__name__)
     return 'hello python decorator'
 
+# We can not call the __call__ function if we not init the class
 class make_bold(object):
-    def __init__(self, func):
-        self.__name__ = make_bold
-        self.func = func
-    def __call__(self):
-        return '<b>{}</b>'.format(self.func())
+    def __init__(self):
+        pass
 
-@make_bold
+    def __call__(self, func):
+        #@wraps(self.func)
+        def inner2():
+            return '<b>{}</b>'.format(func())
+            print("success")
+        return inner2
+        
+class class_test:
+    @classmethod
+    def test(cls, func):
+        @wraps(func)
+        def inner1():
+            return '<b>{}</b>'.format(func())
+        return inner1
+
+temp = make_bold()
+# Every functions could be the decorator
+#@class_test.test
+#@make_bold
+@temp
 def get_content():
-    print(get_content.__name__)
+    #print(get_content.__name__)
     return 'hello world'
 
 def h():
