@@ -3,7 +3,7 @@
 
 import random
 
-# basic bubble sort
+# 原始冒泡排序
 def basic_bubble(l):
     for i in range(len(l)-1):
         for j in range(len(l)-i-1):
@@ -11,18 +11,22 @@ def basic_bubble(l):
                 l[j], l[j+1] = l[j+1], l[j]
     return l
 
-# change flag bubble sort
+# 带标识的冒泡排序
 def flag_bubble(l):
-    for i in range(len(l), 0, -1):
-        flag = False
-        for j in range(i-1):
+    for i in range(len(l)-1):
+        flag = 0
+        for j in range(len(l)-i-1):
             if l[j] > l[j+1]:
-                flag = True
-                l[j], l[j+1] = l[j+1], l[j]
-        if flag == False: # end loop if there is no exchange in this round
-            break
+                l[j+1], l[j] = l[j], l[j+1]
+                flag = 1
+        if flag == 0:  # 一轮比较下来，没有元素交换位置，已经有序，提前返回
+            return l
     return l
 
+# 截断式冒泡排序
+def cut_bubble(l):
+
+    return l
 # double bubble (cocktail sorting)
 def cocktail_bubble(l):
     low, high = 0, len(l)-1
@@ -81,5 +85,5 @@ if __name__ == "__main__":
     random.shuffle(l)
     print(l)
 
-    print(basic_bubble(l))
+    print(flag_bubble(l))
     # print(0)
