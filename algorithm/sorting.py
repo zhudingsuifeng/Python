@@ -25,8 +25,21 @@ def flag_bubble(l):
 
 # 截断式冒泡排序
 def cut_bubble(l):
-
+    bg = len(l)-1
+    for _ in range(len(l)-1):
+        flag = 0
+        j = 0
+        while j < bg:   # 边界
+            if l[j] > l[j+1]:
+                l[j+1], l[j] = l[j], l[j+1]
+                flag = 1
+                tbg = j   # 记录每一轮最后交换的位置
+            j += 1
+        bg = tbg   # 无序的内容进行比较，已经有序的不在比较
+        if flag == 0:
+            return l
     return l
+
 # double bubble (cocktail sorting)
 def cocktail_bubble(l):
     low, high = 0, len(l)-1
@@ -85,5 +98,5 @@ if __name__ == "__main__":
     random.shuffle(l)
     print(l)
 
-    print(flag_bubble(l))
+    print(cut_bubble(l))
     # print(0)
