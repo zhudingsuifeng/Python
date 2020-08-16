@@ -1,0 +1,4 @@
+# file that github need ignore
+env
+*.temp
+.vscode
