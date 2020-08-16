@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 #coding = utf-8
 
+import random
+
 # basic bubble sort
-def bubble_sort(l):
-    for i in range(len(l), 0, -1):
-        for j in range(i-1):
-            if l[j] > l[j+1]:
+def basic_bubble(l):
+    for i in range(len(l)-1):
+        for j in range(len(l)-i-1):
+            if l[j]>l[j+1]:
                 l[j], l[j+1] = l[j+1], l[j]
     return l
 
@@ -75,7 +77,9 @@ def shell_sort(l):
     return l
 
 if __name__ == "__main__":
-    l = list(map(int, input().split()))
+    l = [i for i in range(10)]
+    random.shuffle(l)
+    print(l)
 
-    print(' '.join(list(map(str, shell_sort(l)))))
+    print(basic_bubble(l))
     # print(0)
