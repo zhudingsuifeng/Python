@@ -40,21 +40,43 @@ def cut_bubble(l):
             return l
     return l
 
-# double bubble (cocktail sorting)
-def cocktail_bubble(l):
-    low, high = 0, len(l)-1
-    while low < high: # list is disordered when it's between low and high
-        p = low
-        for i in range(low, high): # low -> high ,watch out the boundary
-            if l[i] > l[i+1]:
-                l[i+1], l[i] = l[i], l[i+1]
-                p = i
-        high = p
-        for j in range(high, low, -1): # high -> low
-            if l[j] < l[j-1]:
-                l[j-1], l[j] = l[j], l[j-1]
-                p = j
-        low = p
+# 原始鸡尾酒排序，双向冒泡排序
+def origin_cocktail_bubble(l):
+    if len(l) <= 1:
+        return l
+    else:
+        for i in range(len(l)//2):  # 每一次大循环，确定最大和最小两个数字
+            for j in range(i, len(l)-i-1):
+                if l[j] > l[j+1]:
+                    l[j], l[j+1] = l[j+1], l[j]
+            for k in range(len(l)-i-1, 0, -1):
+                if l[k] < l[k-1]:
+                    l[k], l[k-1] = l[k-1], l[k]
+        return l
+
+# 带标识位，带边界的鸡尾酒排序
+def optimize_cocktail_bubble(l):
+    top, down = len(l)-1, 0  # 注意边界
+    j, k = 0, len(l)-1
+    for _ in range(len(l)//2):
+        flag = 0
+        while j < top:
+            if l[j] > l[j+1]:
+                l[j], l[j+1] = l[j+1], l[j]
+                flag = 1
+                ttop = j
+            j += 1
+        top = ttop   # 找到有序无序上边界
+        while k > down:
+            if l[k] < l[k-1]:
+                l[k], l[k-1] = l[k-1], l[k]
+                flag = 1
+                tdown = k
+            k -= 1
+        down = tdown  # 有序无序下边界
+        j, k = down, top
+        if flag == 0:   # 已经有序，提前返回
+            return l
     return l
 
 # select sort
@@ -98,5 +120,5 @@ if __name__ == "__main__":
     random.shuffle(l)
     print(l)
 
-    print(cut_bubble(l))
+    print(optimize_cocktail_bubble(l))
     # print(0)
