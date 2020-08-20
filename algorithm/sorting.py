@@ -115,10 +115,50 @@ def shell_sort(l):
                 l[preIndex+gap] = temp
     return l
 
+# 单边循环快速排序
+def single_quick_sort(l):
+    if len(l) <= 1:
+        return l
+    
+    return l
+
+# 双边循环快速排序
+def double_quick_sort(l):
+    if len(l) <= 1:
+        return l
+    elif len(l) == 2:
+        return [min(l), max(l)]        
+    left = 0   # 注意边界
+    right = len(l)-1
+    privot = 0   # 默认第一个元素是基准元素
+    while left < right:
+        if l[privot] <= l[right]:  # 稳定性排序，原来相同的值，保持相对顺序
+            right -= 1
+        elif l[privot] > l[left]:
+            left += 1
+        else:
+            l[left], l[right] = l[right], l[left]
+    l[privot], l[left] = l[left], l[privot]
+    return double_quick_sort(l[:left]) + [l[left]] + double_quick_sort(l[left+1:])
+
+# 简单版快速排序
+def easy_quick_sort(l):
+    if len(l) <= 1:
+        return l
+    privot = l[0]
+    ll = [i for i in l if i < privot]
+    lq = [i for i in l if i == privot]
+    lr = [i for i in l if i > privot]
+    return easy_quick_sort(ll) + lq + easy_quick_sort(lr)
+
+# 非递归快速排序
+def quick_sort(l):
+    return l
+
 if __name__ == "__main__":
     l = [i for i in range(10)]
     random.shuffle(l)
     print(l)
 
-    print(optimize_cocktail_bubble(l))
+    print(easy_quick_sort(l))
     # print(0)
