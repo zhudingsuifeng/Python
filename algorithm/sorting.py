@@ -119,8 +119,13 @@ def shell_sort(l):
 def single_quick_sort(l):
     if len(l) <= 1:
         return l
-    
-    return l
+    privot = l[0]
+    mark = 0
+    for i in range(1, len(l)):
+        if l[i] < privot:
+            l[mark], l[i] = l[i], l[mark]
+            mark += 1
+    return single_quick_sort(l[:mark]) + [privot] + single_quick_sort(l[mark+1:])
 
 # 双边循环快速排序
 def double_quick_sort(l):
@@ -160,5 +165,5 @@ if __name__ == "__main__":
     random.shuffle(l)
     print(l)
 
-    print(easy_quick_sort(l))
+    print(single_quick_sort(l))
     # print(0)
