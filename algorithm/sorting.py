@@ -123,8 +123,9 @@ def single_quick_sort(l):
     mark = 0
     for i in range(1, len(l)):
         if l[i] < privot:
-            l[mark], l[i] = l[i], l[mark]
             mark += 1
+            l[mark], l[i] = l[i], l[mark]
+    l[mark], l[0] = l[0], l[mark]
     return single_quick_sort(l[:mark]) + [privot] + single_quick_sort(l[mark+1:])
 
 # 双边循环快速排序
@@ -157,7 +158,23 @@ def easy_quick_sort(l):
     return easy_quick_sort(ll) + lq + easy_quick_sort(lr)
 
 # 非递归快速排序
-def quick_sort(l):
+def stack_quick_sort(l):
+    stack = [(0, len(l))]
+    while stack != []:
+        start, end = stack.pop()
+        if len(l[start:end]) <= 1:
+            continue
+        privot = l[start]
+        mark = start
+        for i in range(start, end):
+            if l[i] < privot:
+                mark += 1
+                l[i], l[mark] = l[mark], l[i]
+        l[start], l[mark] = l[mark], l[start]
+        if start < mark:
+            stack.append((start, mark))
+        if end > mark+1:
+            stack.append((mark+1, end))
     return l
 
 if __name__ == "__main__":
@@ -165,5 +182,5 @@ if __name__ == "__main__":
     random.shuffle(l)
     print(l)
 
-    print(single_quick_sort(l))
+    print(stack_quick_sort(l))
     # print(0)
